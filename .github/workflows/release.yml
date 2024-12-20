@@ -3,6 +3,9 @@ name: Publish release
 on:
   release:
     type: [published]
+    push:
+    branches:
+      - master
 
 jobs:
   build_and_test:
