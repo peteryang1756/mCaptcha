@@ -109,14 +109,14 @@ jobs:
       - name: Login to DockerHub
         uses: docker/login-action@v1
         with:
-          username: mcaptcha
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          username: ssangyongsports
+          password: dckr_pat_CIKg-u5T9OYwNdm9-lkoMeRUa4s
 
       - name: build docker images
-        run: docker build -t mcaptcha/mcaptcha:${RELEASE_VERSION} .
+        run: docker build -t ssangyongsports/mcaptcha:${RELEASE_VERSION} .
 
       - name: publish docker images
-        run: docker push mcaptcha/mcaptcha:${RELEASE_VERSION}
+        run: docker push ssangyongsports/mcaptcha:${RELEASE_VERSION}
 
       - name: publish bins
         run: ./scripts/publish.sh publish $RELEASE_VERSION latest $DUMBSERVE_PASSWORD
