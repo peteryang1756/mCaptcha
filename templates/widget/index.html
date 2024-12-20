@@ -33,24 +33,86 @@ SPDX-License-Identifier: MIT OR Apache-2.0
           <a href="<.= crate::PKG_HOMEPAGE .>" 
               class="widget__mcaptcha-logo-container"
               target="_blank"
+     <!--
+SPDX-FileCopyrightText: 2023 Aravinth Manivannan <realaravinth@batsense.net>
+
+SPDX-License-Identifier: MIT OR Apache-2.0
+-->
+
+<. include!("../components/headers/widget-headers.html"); .>
+  <body>
+    <main class="widget__container">
+      <form class="widget__inner-container">
+          <noscript>
+            <div class="widget__noscript-container">
+              <span class="widget__noscript-warning">
+                Please enable JavaScript to receive mCaptcha challenge
+              </span>
+              <a class="widget__source-code" href="https://github.com/mCaptcha">
+                Read our source code
+              </a>
+           </div>
+        </noscript>
+        <label class="widget__verification-container" for="widget__verification-checkbox">
+          <span id="widget__verification-text"
+            >我不是機器人</span>
+          <input disabled
+              id="widget__verification-checkbox"
+              aria-valuenow="I'm not a robot"
+                aria-checked="false"
+                role="checkbox"
+              class="widget__verification-checkbox"
+          type="checkbox" />
+        </label>
+        <div class="widget__mcaptcha-details">
+          <a href="<.= crate::PKG_HOMEPAGE .>" 
+              class="widget__mcaptcha-logo-container"
+              target="_blank"
            >
             <img
               class="widget__mcaptcha-logo"
-              src="<.= crate::FILES.get("./static/cache/img/icon-trans.png").unwrap().>"
+              src="https://i.imgur.com/eC5KETl.jpeg"
               alt="mCaptcha logo"
             />
-            <p class="widget__mcaptcha-brand-name">mCaptcha</p>
+            <p class="widget__mcaptcha-brand-name">雙龍體育驗證系統</p>
           </a>
           <div class="widget__mcaptcha-info-container">
             <a class="widget__mcaptcha-info-link"
               target="_blank"
-              href="<.= crate::PKG_HOMEPAGE .><.= crate::PAGES.privacy .>">
-              Privacy
+              href="https//ssangyongsports.eu.org/p">
+              隱私政策
             </a>
             <a class="widget__mcaptcha-info-link"
               target="_blank"
-              href="<.= crate::PKG_HOMEPAGE .><.= crate::PAGES.security .>">
-              Terms
+              href="https//ssangyongsports.eu.org/t">
+              服務條款
+            </a>
+          </div>
+        </div>
+      </form>
+      <div class="progress__bar"><div 
+             aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"
+             role="progressbar" class="progress__fill"></div></div>
+    </main>
+<.include!("./footer.html"); .>
+      >
+            <img
+              class="widget__mcaptcha-logo"
+              src="https://i.imgur.com/eC5KETl.jpeg"
+              alt="雙龍體育 logo"
+            />
+            <p class="widget__mcaptcha-brand-name">雙龍體育驗證系統</p>
+          </a>
+          <div class="widget__mcaptcha-info-container">
+            <a class="widget__mcaptcha-info-link"
+              target="_blank"
+              href="https//ssangyongsports.eu.org/p">
+              隱私政策
+            </a>
+            <a class="widget__mcaptcha-info-link"
+              target="_blank"
+              href="https//ssangyongsports.eu.org/t">
+              服務條款
             </a>
           </div>
         </div>
